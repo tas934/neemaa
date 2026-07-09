@@ -53,12 +53,29 @@ header {
   overflow: hidden;
   background: var(--cream-dark);
 }
-.hero-img-wrap img {
+.hero-mobile,
+.hero-desktop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-mobile {
+    display: block;
     object-position: center 50%;
 }
 
+.hero-desktop {
+    display: none;
+}
+
 @media (min-width: 768px) {
-    .hero-img-wrap img {
+    .hero-mobile {
+        display: none;
+    }
+
+    .hero-desktop {
+        display: block;
         object-position: center center;
     }
 }
@@ -422,11 +439,13 @@ footer {
 
 <!-- HERO — IMAGE PLEIN ÉCRAN -->
 <div class="hero-img-wrap">
-  <img src="Design sans titre.png" alt="NEEMAA Collection">
-       alt="Abaya Kimono Fleurie NEEMAA"
-       onerror="this.parentElement.style.background='#DDD5C8'">
-  <div class="hero-gradient"></div>
-  <div class="hero-text">
+    <img class="hero-mobile" src="1.png" alt="NEEMAA Collection">
+    <img class="hero-desktop" src="Design sans titre.jpg" alt="NEEMAA Collection">
+
+    <div class="hero-gradient"></div>
+
+    <div class="hero-text">
+  
     <p class="hero-eyebrow">Collection été 2026 · Fait main</p>
     <h1 class="hero-title">Abayas & Kimonos <em>Fleuries</em></h1>
     <p class="hero-sub">Pièces exclusives faites main. Stock très limité.</p>
