@@ -573,10 +573,10 @@ footer {
 const BASE = 'https://neemaa-paris.netlify.app/assets/img/products/';
 
 const PRODUITS = [
-  { id:'P1', nom:'Abaya Amira', cat:'Kimono', prix:'69 €', img:'product-35.webp', badge:'Nouveau', badgeClass:'badge-bordeaux', stockMax:20, desc:'Mousseline légère, imprimé roses sur fond crème.' },
-  { id:'P2', nom:'Abaya Aleyna', cat:'Exception', prix:'69 €', img:'product-11.webp', badge:'Limité', badgeClass:'badge-dark', stockMax:10, desc:'Mousseline.' },
-  { id:'P3', nom:'Abaya Émera', cat:'Abaya', prix:'79 €', img:'product-04.webp', badge:'Nouveau', badgeClass:'badge-bordeaux', stockMax:5, desc:'Imprimé fleuri, coupe ample et élégante.' },
-  { id:'P4', nom:'Abaya Selma', cat:'Kimono', prix:'69 €', img:'product-26.webp', badge:'Été', badgeClass:'badge-bordeaux', stockMax:5, desc:'Aérien, pastel, idéal pour les journées chaudes.' },
+  { id:'P1', nom:'Abaya Nourah', cat:'Ensemble Kimono', prix:'69 €', img:'product-35.webp', badge:'Limité', badgeClass:'badge-bordeaux', stockMax:10 },
+  { id:'P2', nom:'Abaya Marwah', cat:'Ensemble Kimono', prix:'69 €', img:'product-11.webp', badge:'Limité', badgeClass:'badge-dark', stockMax:10},
+  { id:'P3', nom:'Abaya Nilüfer', cat:'Kimono', prix:'56 €', img:'product-04.webp', badge:'Nouveau', badgeClass:'badge-bordeaux', stockMax:10},
+  { id:'P4', nom:'Abaya Selma', cat:'Ensemble Kimono', prix:'79 €', img:'product-26.webp', badge:'Été', badgeClass:'badge-bordeaux', stockMax:5},
 ];
 
 // Stock persistant
@@ -605,7 +605,7 @@ function renderProduits() {
         <div class="stock-bar-wrap">
           <div class="sbw-row">
             <span class="sbw-label">Stock</span>
-            <span class="sbw-count"><strong id="sn-${p.id}">${r}</strong> / ${p.stockMax}</span>
+            <span class="sbw-count"><strong id="sn-${p.id}">${r}</strong> restant(s)</span>
           </div>
           <div class="sbw-bar-bg">
             <div class="sbw-bar" id="sb-${p.id}" style="width:${pct}%"></div>
